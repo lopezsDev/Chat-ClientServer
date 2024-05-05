@@ -11,11 +11,11 @@ Scalable Architecture: Built with Spring Boot, the application is highly scalabl
 🚀 Getting Started
 To get started with the Real-Time Chat Application, follow these simple steps:
 
-Clone the repository: git clone https://github.com/your-repo/real-time-chat.git
+Clone the repository: git clone https://github.com/lopezsDev/Chat-ClientServer.git
 Navigate to the project directory: cd real-time-chat
 Build the project: ./mvnw clean package
 Run the application: java -jar target/real-time-chat.jar
-Open your web browser and visit http://localhost:8080 to access the chat application.
+Open your web browser and visit http://localhost:8080/index.html to access the chat application.
 
 📚 Technologies Used
 
@@ -27,8 +27,6 @@ Stomp.js: A JavaScript library that simplifies the use of the WebSocket messagin
 
 🤝 Contributing
 Contributions to the Real-Time Chat Application are always welcome! If you have any ideas, bug fixes, or improvements, please feel free to open an issue or submit a pull request.
-📝 License
-This project is licensed under the MIT License.
 📧 Contact
-If you have any questions, suggestions, or feedback, please don't hesitate to reach out to us at contact@example.com.
+If you have any questions, suggestions, or feedback, please don't hesitate to reach out to us at lopezs.dev@gmail.com.
 Let's chat and have fun! 🎉🎉
