@@ -7,17 +7,19 @@ function connect() {
 }
 
 function onConnected() {
-    const username = document.getElementById('username').value;
-    stompClient.send("/app/chat.addUser", {}, JSON.stringify({ sender: username }));
     stompClient.subscribe('/topic/public', onMessageReceived);
 }
 
 function onMessageReceived(payload) {
     const message = JSON.parse(payload.body);
     const chatMessages = document.getElementById('chat-messages');
-    const messageElement = document.createElement('div');
-    messageElement.textContent = `${message.sender}: ${message.content}`;
-    chatMessages.appendChild(messageElement);
+
+    // Verificar si el mensaje tiene contenido antes de crear el elemento
+    if (message.content) {
+        const messageElement = document.createElement('div');
+        messageElement.textContent = `${message.sender}: ${message.content}`;
+        chatMessages.appendChild(messageElement);
+    }
 }
 
 function onError(error) {
@@ -33,7 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const messageInput = document.getElementById('message');
         const message = messageInput.value;
         if (message.trim() !== '') {
-            stompClient.send("/app/chat.sendMessage", {}, JSON.stringify({ sender: username, content: message }));
+            const chatMessage = { sender: username, content: message };
+            /*stompClient.send("/app/chat.addUser", {}, JSON.stringify(chatMessage));*/
+            stompClient.send("/app/chat.sendMessage", {}, JSON.stringify(chatMessage));
             messageInput.value = '';
         }
     });
