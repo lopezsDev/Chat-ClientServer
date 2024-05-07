@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Chat</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
@@ -9,9 +10,11 @@
 <body>
 <div id="chat-container">
     <div id="chat-messages"></div>
-    <input type="text" id="username" placeholder="Nombre de usuario">
-    <input type="text" id="message" placeholder="Mensaje">
-    <button id="send-button">Enviar</button>
+    <div id="user-message-container">
+        <input type="text" id="username" placeholder="Nombre de usuario">
+        <input type="text" id="message" placeholder="Mensaje">
+        <button id="send-button">Enviar</button>
+    </div>
 </div>
 </body>
 </html>

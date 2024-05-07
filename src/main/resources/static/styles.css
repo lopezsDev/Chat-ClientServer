@@ -1,0 +1,48 @@
+#chat-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+}
+
+#chat-messages {
+    flex: 1;
+    max-width: 70%; /* ajusta el ancho del contenedor de mensajes */
+    padding: 10px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px; /* añade un espacio entre los mensajes y el formulario */
+}
+
+#user-message-container {
+    max-width: 30%; /* ajusta el ancho del contenedor de usuario y mensaje */
+    display: flex;
+    flex-direction: column;
+}
+
+#username, #message, #send-button {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#send-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+#send-button:active {
+    background-color: #0056b3;
+    transform: translateY(1px);
+}
